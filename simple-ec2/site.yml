@@ -1,0 +1,20 @@
+---
+- name: AWS Example
+  hosts: tag_Name_tf_created
+  become: yes
+  become_method: sudo
+  remote_user: ec2-user
+
+  tasks:
+    - name: ensure apache is at the latest version
+      yum:
+        name: httpd
+        state: latest
+      notify: restart apache
+      changed_when: true
+  
+  handlers:
+    - name: restart apache
+      service:
+        name: httpd
+        state: restarted
