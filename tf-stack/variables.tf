@@ -8,4 +8,8 @@ variable "vpc_id" {
     default = "vpc-75f4cb0d"
 }
 
+variable "instancecount" {
+    default = 3
+}
+
 #variable "subnet_id" {}
