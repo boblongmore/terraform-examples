@@ -12,6 +12,7 @@ RUN apt-get update && \
 
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "/tmp/awscliv2.zip"
 RUN unzip /tmp/awscliv2.zip -d /tmp/
+RUN /tmp/aws/install
 RUN wget https://releases.hashicorp.com/terraform/1.1.2/terraform_1.1.2_linux_amd64.zip -O ~/terraform.zip
 RUN unzip ~/terraform.zip -d ~/ && sudo mv ~/terraform /usr/local/bin/terraform
     
