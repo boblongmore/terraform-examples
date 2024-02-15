@@ -9,7 +9,8 @@
 			"extensions": [
 				"hashicorp.terraform",
 				"zaaack.markdown-editor",
-				"DavidAnson.vscode-markdownlint"
+				"DavidAnson.vscode-markdownlint",
+				"eamodio.gitlens"
 			]
 		}
 	}
